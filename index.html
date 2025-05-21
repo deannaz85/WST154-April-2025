@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>April 2025 WST 154</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input, button { padding: 8px; margin: 5px 0; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>April 2025 WST 154</h1>
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="./assignment1/">Assignment 1</a></li>
+        <li><a href="./assignment2/">Assignment 2</a></li>
+    </ul>
+
+    <h2>Groceries List</h2>
+    <input type="text" id="itemInput" placeholder="Add grocery item">
+    <button onclick="addItem()">Add</button>
+    <ul id="groceryList"></ul>
+
+    <script>
+        function addItem() {
+            const input = document.getElementById('itemInput');
+            const item = input.value.trim();
+            if (item) {
+                const li = document.createElement('li');
+                li.textContent = item;
+                document.getElementById('groceryList').appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
